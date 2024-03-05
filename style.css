@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;900;1000&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+    display: grid;
+    align-content: center;
+    background: linear-gradient(to bottom left, #000000, #2e2e2e);
+}
+
+.content {
+    background: linear-gradient(45deg, red, yellow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textAnimate 5s linear infinite;
+    z-index: 1;
+}
+
+h1, h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 1000 ;
+    font-size: 5vw;
+}
+h2 {
+    font-size: 4vw;
+}
+
+@keyframes textAnimate {
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.animate div {
+    --size: 30px;
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    bottom: -150px;
+    left: 18%;
+    background-color: rgba(255,255,255, 0.4);
+    animation: animate 18s linear infinite ;
+}
+
+.animate div:nth-child(2) {
+    --size: 150px;
+    left: 20%;
+    animation-duration: 16s;
+    animation-delay: 4s;
+}
+.animate div:nth-child(3) {
+    --size: 50px;
+    left: 19%;
+    animation-duration: 22s;
+    animation-delay: 2s;
+}
+.animate div:nth-child(4) {
+    --size: 100px;
+    left: 35%;
+    animation-duration: 21s;
+    animation-delay: 4s;
+}
+.animate div:nth-child(5) {
+    --size: 30px;
+    left: 40%;
+    animation-duration: 14s;
+    animation-delay: 0s;
+}
+.animate div:nth-child(6) {
+    --size: 70px;
+    left: 50%;
+    animation-duration: 20s;
+    animation-delay: 3s;
+}
+.animate div:nth-child(7) {
+    --size: 150px;
+    left: 50%;
+    animation-duration: 26s;
+    animation-delay: 1s;
+}
+.animate div:nth-child(8) {
+    --size: 30px;
+    left: 60%;
+    animation-duration: 15s;
+    animation-delay: 5s;
+}
+.animate div:nth-child(9) {
+    --size: 60px;
+    left: 70%;
+    animation-duration: 18s;
+    animation-delay: 0s;
+}
+.animate div:nth-child(10) {
+    --size: 150px;
+    left: 80%;
+    animation-duration: 23s;
+    animation-delay: 2s;
+}
+.animate div:nth-child(11) {
+    --size: 40px;
+    left: 5%;
+    animation-duration: 16s;
+    animation-delay: 2s;
+}
+.animate div:nth-child(12) {
+    --size: 100px;
+    left: 93%;
+    animation-duration: 14s;
+    animation-delay: 4s;
+}
+.animate div:nth-child(13) {
+    --size: 100px;
+    left: 10%;
+    animation-duration: 14s;
+    animation-delay: 3s;
+}
+
+@keyframes animate {
+    from{
+        transform: translateY(0) rotate(0deg);
+        border-radius: 0;
+        opacity: 0;
+    }
+    to{
+        transform: translateY(-130vh) rotate(720deg);
+        border-radius: 50%;
+        opacity: 1;
+    }
+}
